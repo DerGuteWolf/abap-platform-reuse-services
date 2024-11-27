@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_NROB" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <ATTRIBUTES>
+    <OBJECT>ZREUSE_SO</OBJECT>
+    <DOMLEN>ZREUSE_SALESORDER_ID</DOMLEN>
+    <PERCENTAGE>10.0</PERCENTAGE>
+   </ATTRIBUTES>
+   <TEXT>
+    <LANGU>E</LANGU>
+    <OBJECT>ZREUSE_SO</OBJECT>
+    <TXT>Number range for sales orders</TXT>
+    <TXTSHORT>Number range for...</TXTSHORT>
+   </TEXT>
+  </asx:values>
+ </asx:abap>
+</abapGit>

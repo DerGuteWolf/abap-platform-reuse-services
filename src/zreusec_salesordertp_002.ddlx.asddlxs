@@ -1,0 +1,212 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'SalesOrder', 
+    typeNamePlural: 'SalesOrders', 
+    title: {
+      type: #STANDARD, 
+      label: 'SalesOrder', 
+      value: 'SalesorderID'
+    }
+  }, 
+  presentationVariant: [ {
+    sortOrder: [ {
+      by: 'SalesorderID', 
+      direction: #DESC
+    } ], 
+    visualizations: [ {
+      type: #AS_LINEITEM
+    } ]
+  } ]
+}
+annotate view ZREUSEC_SalesOrderTP_002 with
+{
+  @UI.facet: [ {
+    id: 'idCollection', 
+    type: #COLLECTION, 
+    label: 'SalesOrder', 
+    position: 10 
+  }, 
+  {
+    id: 'idIdentification', 
+    parentId: 'idCollection', 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'General Information', 
+    position: 20 
+  }, 
+  {
+    id: 'idItem', 
+    type: #LINEITEM_REFERENCE, 
+    label: 'Item', 
+    position: 30 , 
+    targetElement: '_Item'
+  }
+  
+  ,
+  {
+  id: 'idChangeDocs',
+  type: #LINEITEM_REFERENCE,
+  label: 'Change Documents',
+  position: 70 ,
+  targetElement: '_ChangeDocs'
+  }
+   ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    importance: #HIGH, 
+    label: 'SalesorderID'
+  } 
+  
+   ,
+    {  type: #FOR_ACTION, dataAction: 'createPDF', label: 'Create PDF' }
+  
+  
+  ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'SalesorderID'
+  } 
+  
+   ,
+    {  type: #FOR_ACTION, dataAction: 'createPDF', label: 'Create PDF' }
+  ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  SalesorderID;
+  
+  @UI.lineItem: [ {
+    position: 20 , 
+    importance: #HIGH, 
+    label: 'CustomerID'
+  } ]
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'CustomerID'
+  } ]
+  CustomerID;
+  
+  @UI.lineItem: [ {
+    position: 30 , 
+    importance: #HIGH, 
+    label: 'PaymentMethod'
+  } ]
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'PaymentMethod'
+  } ]
+  PaymentMethod;
+  
+  @UI.lineItem: [ {
+    position: 40 , 
+    importance: #HIGH, 
+    label: 'AmountExclVat'
+  } ]
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'AmountExclVat'
+  } ]
+  AmountExclVat;
+  
+  @UI.lineItem: [ {
+    position: 50 , 
+    importance: #HIGH, 
+    label: 'AmountVat'
+  } ]
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'AmountVat'
+  } ]
+  AmountVat;
+  
+  @UI.lineItem: [ {
+    position: 60 , 
+    importance: #HIGH, 
+    label: 'TotalAmount'
+  } ]
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'TotalAmount'
+  } ]
+  TotalAmount;
+  
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+  CurrencyCode;
+  
+  @UI.lineItem: [ {
+    position: 80 , 
+    importance: #HIGH, 
+    label: 'Description'
+  } ]
+  @UI.identification: [ {
+    position: 80 , 
+    label: 'Description'
+  } ]
+  Description;
+  
+  @UI.lineItem: [ {
+    position: 90 , 
+    importance: #HIGH, 
+    label: 'OverallStatus'
+  } ]
+  @UI.identification: [ {
+    position: 90 , 
+    label: 'OverallStatus'
+  } ]
+  OverallStatus;
+  
+  @UI.identification: [ {
+    position: 100 , 
+    label: 'Attachment'
+  } ]
+  @UI.lineItem: [ {
+    position: 100 , 
+    label: 'Attachment'
+  } ]
+
+  Attachment;
+  
+  @UI.identification: [ {
+    position: 110 , 
+    label: 'Mime Type'
+  } ]
+  @UI.lineItem: [ {
+    position: 110 , 
+    label: 'Mime Type'
+  } ]
+  @UI.selectionField: [ {
+    position: 110 
+  } ]
+  MimeType;
+  
+  @UI.identification: [ {
+    position: 120 , 
+    label: 'Filename'
+  } ]
+  @UI.lineItem: [ {
+    position: 120 , 
+    label: 'Filename'
+  } ]
+  @UI.selectionField: [ {
+    position: 120 
+  } ]
+  FileName;
+  
+  
+  @UI.hidden: true
+  CreatedAt;
+  
+  @UI.hidden: true
+  CreatedBy;
+  
+  @UI.hidden: true
+  LastChangedBy;
+  
+  @UI.hidden: true
+  LastChangedAt;
+  
+  @UI.hidden: true
+  LocalLastChangedAt;
+}

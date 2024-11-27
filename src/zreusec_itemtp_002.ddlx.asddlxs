@@ -1,0 +1,144 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'Item',
+    typeNamePlural: 'Items',
+    title: {
+      type: #STANDARD,
+      label: 'Item',
+      value: 'ItemID'
+    }
+  },
+  presentationVariant: [ {
+    sortOrder: [ {
+      by: 'ItemID',
+      direction: #DESC
+    } ],
+    visualizations: [ {
+      type: #AS_LINEITEM
+    } ]
+  } ]
+}
+annotate view ZREUSEC_ItemTP_002 with
+{
+  @UI.facet: [ {
+    id: 'idItem',
+    purpose: #STANDARD,
+    type: #IDENTIFICATION_REFERENCE,
+    label: 'Item',
+    position: 10
+  } ]
+  @UI.lineItem: [ {
+    position: 10 ,
+    importance: #HIGH,
+    label: 'SalesorderID'
+  } ]
+  @UI.identification: [ {
+    position: 10 ,
+    label: 'SalesorderID'
+  } ]
+  SalesorderID;
+
+  @UI.lineItem: [ {
+    position: 20 ,
+    importance: #HIGH,
+    label: 'ItemID'
+  } ]
+  @UI.identification: [ {
+    position: 20 ,
+    label: 'ItemID'
+  } ]
+  ItemID;
+
+  @UI.lineItem: [ {
+    position: 30 ,
+    importance: #HIGH,
+    label: 'Product'
+  } ]
+  @UI.identification: [ {
+    position: 30 ,
+    label: 'Product'
+  } ]
+  Product;
+
+  @UI.lineItem: [ {
+    position: 40 ,
+    importance: #HIGH,
+    label: 'Quantity'
+  } ]
+  @UI.identification: [ {
+    position: 40 ,
+    label: 'Quantity'
+  } ]
+  Quantity;
+
+  @UI.lineItem: [ {
+    position: 60 ,
+    importance: #HIGH,
+    label: 'AmountExclVat'
+  } ]
+  @UI.identification: [ {
+    position: 60 ,
+    label: 'AmountExclVat'
+  } ]
+  AmountExclVat;
+
+  @UI.lineItem: [ {
+    position: 70 ,
+    importance: #HIGH,
+    label: 'AmountVat'
+  } ]
+  @UI.identification: [ {
+    position: 70 ,
+    label: 'AmountVat'
+  } ]
+  AmountVat;
+
+  @UI.lineItem: [ {
+    position: 80 ,
+    importance: #HIGH,
+    label: 'Amount'
+  } ]
+  @UI.identification: [ {
+    position: 80 ,
+    label: 'Amount'
+  } ]
+  Amount;
+
+  @UI.lineItem: [ {
+  position: 85 ,
+  importance: #HIGH,
+  label: 'UnitPrice'
+  } ]
+  @UI.identification: [ {
+    position: 85 ,
+    label: 'UnitPrice'
+  } ]
+
+  UnitPrice;
+
+  @UI.lineItem: [ {
+    position: 100 ,
+    importance: #HIGH,
+    label: 'Description'
+  } ]
+  @UI.identification: [ {
+    position: 100 ,
+    label: 'Description'
+  } ]
+  Description;
+
+  @UI.lineItem: [ {
+    position: 110 ,
+    importance: #HIGH,
+    label: 'OverallStatus'
+  } ]
+  @UI.identification: [ {
+    position: 110 ,
+    label: 'OverallStatus'
+  } ]
+  OverallStatus;
+
+  @UI.hidden: true
+  LocalLastChangedAt;
+}
