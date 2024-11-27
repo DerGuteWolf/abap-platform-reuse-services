@@ -12,7 +12,7 @@ The [Reuse Tool](https://reuse.software/) must be used for your samples project.
 3. The README.md file (this file):
 Please edit this file as it is the primary description file for your project. You can find some placeholder titles for sections below.
 
-# [Title]
+# Reuse services in ABAP Cloud
 <!-- Please include descriptive title -->
 
 <!--- Register repository https://api.reuse.software/register, then add REUSE badge:
@@ -20,7 +20,22 @@ Please edit this file as it is the primary description file for your project. Yo
 -->
 
 ## Description
-<!-- Please include SEO-friendly description -->
+In this repository you will find sample code that shows how to work with the following reuse services:   
+- Number Ranges
+- Change Documents
+- Adobe Forms Service
+
+The repository contains a simple sample RAP business objects to create sales orders and items.  
+
+### Number Ranges
+
+When you create a sales order a new number will be drawn from a number range. The RAP business object uses early numbering.
+
+### Change Documents
+
+The repository contains a change document object based on the two underlying tables that are used to store the sales order data and the data of the items.  
+Two fields **Amount** and **Overall Status** of the sales order data table use data elements where the _Change Documeng Logging_ has been enabled. Only changes are recorded, not the inital values.  
+That means that after you have created a sales order and change an item or add an item the total amaount will be changed as well and this change will be recorded and displayed in the Fiori Elements OData V4 app.
 
 ## Requirements
 
