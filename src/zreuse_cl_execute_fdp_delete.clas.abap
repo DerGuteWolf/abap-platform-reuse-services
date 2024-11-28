@@ -34,7 +34,7 @@ CLASS ZREUSE_CL_EXECUTE_FDP_DELETE IMPLEMENTATION.
 *
 *        template = 'ZREUSEUI_SALESORDER_002'.
 
-        DATA(lo_store) = NEW zcl_fp_tmpl_store_client(
+        DATA(lo_store) = NEW zreusecl_fp_tmpl_store_client(
           iv_service_instance_name = 'ZADSTEMPLSTORE'
           iv_use_destination_service = abap_false
         ).

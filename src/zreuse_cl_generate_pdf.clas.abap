@@ -25,9 +25,9 @@ CLASS zreuse_cl_generate_pdf DEFINITION
            lt_keys             TYPE if_fp_fdp_api=>tt_select_keys,
 
            lo_fdp_util         TYPE REF TO if_fp_fdp_api,
-           lo_store            TYPE REF TO zcl_fp_tmpl_store_client,
+           lo_store            TYPE REF TO zREUSEcl_fp_tmpl_store_client,
            xsd_schema          TYPE xstring,
-           ls_template         TYPE zcl_fp_tmpl_store_client=>ty_template_body.
+           ls_template         TYPE zREUSEcl_fp_tmpl_store_client=>ty_template_body.
 
 ENDCLASS.
 
@@ -40,7 +40,7 @@ CLASS ZREUSE_CL_GENERATE_PDF IMPLEMENTATION.
 
     "Initialize Template Store Client (using custom comm scenario)
     TRY.
-        lo_store = NEW zcl_fp_tmpl_store_client(
+        lo_store = NEW zREUSEcl_fp_tmpl_store_client(
           iv_service_instance_name = 'ZADSTEMPLSTORE'
           iv_use_destination_service = abap_false
         ).
