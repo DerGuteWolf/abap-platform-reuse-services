@@ -40,7 +40,18 @@ Demo Flow:
 
 Changes to the field "TotalAmount" are saved and displayed via a custom entity, not the reuse-library, since the demo app is an OData V4 app.
 
+<img src="images/change_documents_010.png" alt="change_documents_in_v4_app" width="100%">    
 
+### Implementation details   
+
+The change document object 'ZREUSE_SO_002' only records changes not any initial values. Therefore the changes are only visible after the initial values for a salesorder are changed.
+For the data element 'ZREUSE_TOTAL_AMOUNT_002' in the additional properties the flag **change document logging** has been activated.  
+
+<img src="images/change_documents_020.png" alt="change document logging" width="100%">     
+
+The display of changes is done using a custom entity 'ZREUSEI_CDREDADD_002' that uses the change document API in the query implementation class 'ZREUSECL_GET_CHANGE_DOCS_002' to read the data
+
+<img src="images/change_documents_030.png" alt="change document logging" width="100%"> 
 
 ## Requirements
 
