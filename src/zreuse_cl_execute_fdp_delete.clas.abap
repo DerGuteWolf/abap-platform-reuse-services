@@ -59,13 +59,13 @@ CLASS ZREUSE_CL_EXECUTE_FDP_DELETE IMPLEMENTATION.
               out->write( rs_form-form_name ).
             ENDLOOP.
 
-          CATCH zcx_fp_tmpl_store_error INTO DATA(list_form_exc).
+          CATCH zReusecx_fp_tmpl_store_error INTO DATA(list_form_exc).
             out->write( list_form_exc->get_text(  ) ).
         ENDTRY.
         TRY.
             lo_store->get_schema_by_name( iv_form_name =  template_form_name ). " 'DemoForm'  ). "DSAG_DEMO' ).
             out->write( | template { template_form_name } found|  ).
-          CATCH zcx_fp_tmpl_store_error INTO DATA(lo_tmpl_error).
+          CATCH zreusecx_fp_tmpl_store_error INTO DATA(lo_tmpl_error).
             out->write( |{ template_form_name } not found in store | ).
 
             IF lo_tmpl_error->mv_http_status_code = 404.
@@ -187,7 +187,7 @@ CLASS ZREUSE_CL_EXECUTE_FDP_DELETE IMPLEMENTATION.
         ).
         out->write( 'Output was sent to print queue' ).
 
-      CATCH cx_fp_fdp_error zcx_fp_tmpl_store_error cx_fp_ads_util INTO DATA(lo_err).
+      CATCH cx_fp_fdp_error zreusecx_fp_tmpl_store_error cx_fp_ads_util INTO DATA(lo_err).
         out->write( 'Exception occurred.' ).
         out->write( lo_err->get_text(  ) ).
     ENDTRY.

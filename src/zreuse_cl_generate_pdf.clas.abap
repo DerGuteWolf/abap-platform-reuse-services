@@ -74,7 +74,7 @@ CLASS ZREUSE_CL_GENERATE_PDF IMPLEMENTATION.
       CATCH  cx_fp_fdp_error   INTO DATA(forms_processing_exception).
         error_message_initialization = forms_processing_exception->get_text(  ).
 
-      CATCH zcx_fp_tmpl_store_error INTO DATA(template_store_error).
+      CATCH zreusecx_fp_tmpl_store_error INTO DATA(template_store_error).
         IF template_store_error->mv_http_status_code = 404.
           "Upload service definition
           TRY.
@@ -82,7 +82,7 @@ CLASS ZREUSE_CL_GENERATE_PDF IMPLEMENTATION.
                 iv_form_name =  template_form_name "'ZREUSEUI_SALESORDER_002' "'DemoForm'
                 is_data = VALUE #( note = '' schema_name = 'schema' xsd_schema = xsd_schema  )
               ).
-            CATCH zcx_fp_tmpl_store_error  INTO DATA(template_store_error_2).
+            CATCH zreusecx_fp_tmpl_store_error  INTO DATA(template_store_error_2).
               error_message_initialization = template_store_error->get_text(  ).
           ENDTRY.
         ELSE.
