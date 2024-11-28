@@ -30,9 +30,9 @@ That means that after you have created a sales order and change an item or add a
 Demo Flow:  
 1. Create a new Salesorder
 2. Create an Item
-   a. Select a product
-   b. Enter a quantity, e.g. "2"
-   c. Press Apply
+   - Select a product
+   - Enter a quantity, e.g. "2"
+   - Press Apply
 3. Press "Create" to create the SalesOrder
 4. Press "Edit"
 5. Change the quantity to another value, e.g. "4"
