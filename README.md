@@ -1,17 +1,3 @@
-# SAP-samples/repository-template
-This default template for SAP Samples repositories includes files for README, LICENSE, and .reuse/dep5. All repositories on github.com/SAP-samples will be created based on this template.
-
-# Containing Files
-
-1. The LICENSE file:
-In most cases, the license for SAP sample projects is `Apache 2.0`.
-
-2. The .reuse/dep5 file: 
-The [Reuse Tool](https://reuse.software/) must be used for your samples project. You can find the .reuse/dep5 in the project initial. Please replace the parts inside the single angle quotation marks < > by the specific information for your repository.
-
-3. The README.md file (this file):
-Please edit this file as it is the primary description file for your project. You can find some placeholder titles for sections below.
-
 # Reuse services in ABAP Cloud
 <!-- Please include descriptive title -->
 
@@ -20,12 +6,16 @@ Please edit this file as it is the primary description file for your project. Yo
 -->
 
 ## Description
+
 In this repository you will find sample code that shows how to work with the following reuse services:   
+
 - Number Ranges
 - Change Documents
 - Adobe Forms Service
 
-The repository contains a simple sample RAP business objects to create sales orders and items.  
+The repository contains a simple sample RAP business objects to create sales orders and items. The semantic key for the sales orders is drawn from a _number range object_. Changes to two fields of the sales order are recorded using a _change document object_ and to data elements for the _total amount_ and the _overall status_ that have been configured appropriately to record changes.  
+
+Using an action the sample also shows how content of a sales order entity including its items can be used to fill a form from the _Adobe Forms Service_ to create a PDF document.  
 
 ### Number Ranges
 
@@ -39,13 +29,19 @@ That means that after you have created a sales order and change an item or add a
 
 ## Requirements
 
+- Adobe Forms Service
+
 ## Download and Installation
+
+Create a package, e.g. **'ZREUSE_SERVICES_002'** and link this package with the URL of this repository.
 
 ## Known Issues
 <!-- You may simply state "No known issues. -->
 
+No known issues.   
+
 ## How to obtain support
-[Create an issue](https://github.com/SAP-samples/<repository-name>/issues) in this repository if you find a bug or have questions about the content.
+[Create an issue](https://github.com/SAP-samples/abap-platform-reuse-services/issues) in this repository if you find a bug or have questions about the content.
  
 For additional support, [ask a question in SAP Community](https://answers.sap.com/questions/ask.html).
 
