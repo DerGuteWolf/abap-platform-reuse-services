@@ -27,6 +27,21 @@ The repository contains a change document object based on the two underlying tab
 Two fields **Amount** and **Overall Status** of the sales order data table use data elements where the _Change Documeng Logging_ has been enabled. Only changes are recorded, not the inital values.  
 That means that after you have created a sales order and change an item or add an item the total amaount will be changed as well and this change will be recorded and displayed in the Fiori Elements OData V4 app.
 
+Demo Flow:  
+1. Create a new Salesorder
+2. Create an Item
+   a. Select a product
+   b. Enter a quantity, e.g. "2"
+   c. Press Apply
+3. Press "Create" to create the SalesOrder
+4. Press "Edit"
+5. Change the quantity to another value, e.g. "4"
+6. Press "Save"
+
+Changes to the field "TotalAmount" are saved and displayed via a custom entity, not the reuse-library, since the demo app is an OData V4 app.
+
+
+
 ## Requirements
 
 - Adobe Forms Service
