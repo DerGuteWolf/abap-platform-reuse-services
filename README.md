@@ -42,7 +42,7 @@ Changes to the field "TotalAmount" are saved and displayed via a custom entity, 
 
 <img src="images/Change_documents_010.png" alt="change_documents_in_v4_app" width="100%">    
 
-### Implementation details   
+#### Implementation details   
 
 The change document object 'ZREUSE_SO_002' only records changes not any initial values. Therefore the changes are only visible after the initial values for a salesorder are changed.
 For the data element 'ZREUSE_TOTAL_AMOUNT_002' in the additional properties the flag **change document logging** has been activated.  
@@ -52,6 +52,35 @@ For the data element 'ZREUSE_TOTAL_AMOUNT_002' in the additional properties the 
 The display of changes is done using a custom entity 'ZREUSEI_CDREDADD_002' that uses the change document API in the query implementation class 'ZREUSECL_GET_CHANGE_DOCS_002' to read the data
 
 <img src="images/Change_documents_030.png" alt="change document logging" width="100%"> 
+
+### Adobe Forms Service 
+
+1. Create a new Salesorder
+2.  Select a customer
+3.  Create an Item
+    - Select a product
+    - Enter a quantity, e.g. "2"
+    - Press Apply
+4. Create a second item
+5. Press "Create" to create the SalesOrder
+6. Press the "Create PDF" button, the description changes to "PDF generation started" and wait a few seconds
+7. Refresh the browser
+8. Description changes to "success" and a PDF is show as an attachement that contains the salesorder data
+
+<img src="images/adobe_forms_010.png" alt="pdf created" width="100%">  
+
+The field "Description" shall contain the value "Success" (the demo will be changed such that the field "overallstatus" will be changed instead)
+
+The field attachement will contain the binary data of a PDF that has been generated using the Adobe Forms Service in SAP BTP. The document contains values from the SalesOrder that has been created.
+
+When you click on the link "file_23.pdf" the file will be offered for download and you can open it. 
+
+<img src="images/adobe_forms_020.png" alt="link to pdf" width="100%">  
+
+The demo uses a very simple PDF template 'ZREUSEUI_SALESORDER_002_ADS' with a form also called 'ZREUSEUI_SALESORDER_002_ADS'. 
+
+<img src="images/adobe_forms_030.png" alt="link to pdf" width="100%">  
+
 
 ## Requirements
 
