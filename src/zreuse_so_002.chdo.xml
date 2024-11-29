@@ -23,6 +23,13 @@
       <DOCUD_NOIF>X</DOCUD_NOIF>
      </TCDOBS>
     </OBJECTS>
+    <OBJECTS_TEXT>
+	     <item>
+	      <SPRAS>E</SPRAS>
+	      <OBJECT>ZREUSE_SO_002</OBJECT>
+	      <OBTEXT>Change documents</OBTEXT>	      
+	     </item>
+	    </OBJECTS_TEXT>   
    </CHDO>
   </asx:values>
  </asx:abap>
