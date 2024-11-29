@@ -91,7 +91,29 @@ Create a package, e.g. **'ZREUSE_SERVICES_002'** and link this package with the 
 ## Known Issues
 <!-- You may simply state "No known issues. -->
 
-No known issues.   
+The import of the change document object 'ZREUSE_SO_002' currently fails. As a result you have to create the same after the import of the repository manually.   
+
+<details>   
+  <summary>Click to expand!</summary>   
+
+1. Right click on the package where you have imported this repository.   
+2. Choose **New --> Other repository object** from the context menue.   
+3. Search for **Change** and select **Change Document Object**.   
+4. Press **Next**.   
+5. Enter the following values:  
+   -  **Name**: 'ZREUSE_SO_002'.  
+   -  **Description**: 'Change Documents'.  
+6. Press **Next**.  
+7. Select or create a transport request.  
+8. Press **Finish**.  
+9. Press **Add** and enter the following value.  
+   - **Name**: 'ZREUSE_HEAD_002'.  
+10. Press **Add** and enter the following value.  
+   - **Name**: 'ZREUSE_ITEM_002'.  
+11. Press **Save**.  
+12. Press **Ctrl+F3** to activate your changes.  
+
+</details>   
 
 ## How to obtain support
 [Create an issue](https://github.com/SAP-samples/abap-platform-reuse-services/issues) in this repository if you find a bug or have questions about the content.
