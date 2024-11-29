@@ -109,7 +109,7 @@ The import of the change document object 'ZREUSE_SO_002' currently fails. As a r
 9. Press **Add** and enter the following value.  
    - **Name**: 'ZREUSE_HEAD_002'.  
 10. Press **Add** and enter the following value.  
-   - **Name**: 'ZREUSE_ITEM_002'.  
+    - **Name**: 'ZREUSE_ITEM_002'.  
 11. Press **Save**.  
 12. Press **Ctrl+F3** to activate your changes.  
 
