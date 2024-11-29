@@ -9,7 +9,7 @@ CLASS zreusecl_setup_demo_data DEFINITION
   PROTECTED SECTION.
   PRIVATE SECTION.
 
-    METHODS: reset_numberrange_interval
+    METHODS reset_numberrange_interval
       IMPORTING
         numberrange_object   TYPE cl_numberrange_runtime=>nr_object
         numberrange_interval TYPE cl_numberrange_runtime=>nr_interval
@@ -19,6 +19,8 @@ CLASS zreusecl_setup_demo_data DEFINITION
         nrlevel              TYPE cl_numberrange_intervals=>nr_nriv_line-nrlevel DEFAULT 0
       RAISING
         cx_number_ranges.
+
+
 
 
 ENDCLASS.
@@ -162,5 +164,7 @@ CLASS zreusecl_setup_demo_data IMPLEMENTATION.
 *
 *    ENDIF.
   ENDMETHOD.
+
+
 
 ENDCLASS.
